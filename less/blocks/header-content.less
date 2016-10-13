@@ -1,0 +1,72 @@
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-content__welcome-wrapper {
+  position: relative;
+
+  height: 158px;
+  padding-top: 55px;
+  margin-bottom: 42px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: 50% 100%;
+
+  &--big-photo {
+    height: 389px;
+    padding-top: 90px;
+
+    background-position: 50%;
+  }
+
+  &::after {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    height: 26px;
+    width: 320px;
+
+    background: url("../img/bg-intro-triangle-mobile.svg");
+
+    background-size: 320px 27px;
+
+    content: "";
+  }
+}
+
+.header-content__title {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  text-align: center;
+
+  &--big-margin {
+    margin-bottom: 30px;
+  }
+}
+
+.header-content__text {
+  width: 270px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--high {
+    line-height: 26px;
+  }
+
+  &--wide {
+    width: 300px;
+  }
+
+}
