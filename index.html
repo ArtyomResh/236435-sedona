@@ -3,24 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Седона. Добро пожаловать в Седону!</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     <header class="header-main">
-      <a class="logo-main"><img src="http://placehold.it/102x83" width="102" height="83" alt="Логотип Седоны"></a>
-      <a href="#" class="header-main__burger"></a>
+      <div class="header-main__logo-wrapper">
+        <a class="header-main__logo  logo-main"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны"></a>
+        <a href="#" class="header-main__burger"></a>
+      </div>
       <nav class="header-main__nav">
         <ul class="header-main__nav-list  header-main__nav-list--hidden">
-          <li>
+          <li class="header-main__nav-item">
             <a class="header-main__nav-link">Главная</a>
           </li>
-          <li>
+          <li class="header-main__nav-item">
             <a href="photo.html" class="header-main__nav-link">Фото и видео</a>
           </li>
-          <li>
+          <li class="header-main__nav-item">
             <a href="form.html" class="header-main__nav-link">Форма отзыва</a>
           </li>
-          <li>
+          <li class="header-main__nav-item">
             <a href="#" class="header-main__nav-link">HTML Academy</a>
           </li>
         </ul>
