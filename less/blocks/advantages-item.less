@@ -13,6 +13,25 @@
     background-color: #eeeeee;
   }
 
+  &--underline {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+
+      width: 87.5%;
+      height: 1px;
+
+      background-color: #d6d6d6;
+
+      transform: translateX(-50%);
+
+      content: "";
+    }
+  }
+
   &--triangle-top {
     position: relative;
 
