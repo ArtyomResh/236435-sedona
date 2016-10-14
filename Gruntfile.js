@@ -5,6 +5,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-postcss");
   grunt.loadNpmTasks("grunt-contrib-less");
+  grunt.loadNpmTasks("grunt-svgstore");
+  grunt.loadNpmTasks("grunt-svgmin");
 
   grunt.initConfig({
     less: {
@@ -57,8 +59,31 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+          files: {
+            "img/icons-inline.svg": ["img/icons-inline/*.svg"]
+        }
+      }
+    },
+
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/icons-inline/*.svg"]
+        }]
+      }
     }
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("svgsprite", ["svgmin","svgstore"]);
 };
