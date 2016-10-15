@@ -1,0 +1,161 @@
+.advantages-item__header {
+  &--blue {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    color: #ffffff;
+
+    background-color: #81b3d2;
+  }
+
+  &--gray {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: #eeeeee;
+  }
+
+  &--underline {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+
+      width: 87.5%;
+      height: 1px;
+
+      background-color: #d6d6d6;
+
+      transform: translateX(-50%);
+
+      content: "";
+    }
+  }
+
+  &--triangle-top {
+    position: relative;
+
+    margin-top: -23px;
+    padding-top: 78px;
+    padding-bottom: 40px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 37px;
+
+      background: url("../img/bg-triangle.svg") no-repeat;
+
+      background-size: 100% 37px;
+
+      content: "";
+
+    }
+  }
+}
+
+.advantages-item__tittle {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  &--white {
+    color: #ffffff;
+  }
+}
+
+.advantages-item__number {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.advantages-item__text {
+  width: 250px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  &--wide {
+    width: 260px;
+  }
+}
+
+.advantages-item__features-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.advantages-item__features-list-item {
+  width: 250px;
+  padding-left: 70px;
+}
+
+.advantages-item__feature-title {
+  position: relative;
+
+  margin-bottom: 5px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: "";
+  }
+}
+
+.advantages-item__feature-title--house {
+  &::before {
+    top: -10px;
+    left: -50px;
+
+    width: 39px;
+    height: 37px;
+
+    background: url("../img/icon-house.svg") no-repeat;
+    background-size: 39px 37px;
+  }
+}
+
+.advantages-item__feature-title--gift {
+  &::before {
+    top: -12px;
+    left: -45px;
+
+    width: 32px;
+    height: 38px;
+
+    background: url("../img/icon-gift.svg") no-repeat;
+    background-size: 32px 38px;
+  }
+}
+
+.advantages-item__feature-title--burger {
+  &::before {
+    top: -5px;
+    left: -51px;
+
+    width: 40px;
+    height: 35px;
+
+    background: url("../img/icon-burger.svg") no-repeat;
+    background-size: 40px 35px;
+  }
+}
+
+.advantages-item__feature-text {
+  width: 230px;
+  margin-bottom: 28px;
+}
+
+.advantages-item__photo {
+  margin-bottom: -6px;
+}

@@ -1,0 +1,267 @@
+///////////////////////////ОБЩИЕ НАСТРОЙКИ ДЛЯ ПОЛЕЙ
+
+input::placeholder {
+  color: #000000;
+}
+
+textarea::placeholder {
+  color: #000000;
+}
+
+.review-form {
+  margin-top: -11px;
+  padding-bottom: 43px;
+}
+
+.review-form__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+}
+.review-form__legend {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-top: 18px;
+
+  .font-PTS-bold(18px, 26px);
+  text-align: center;
+
+  border-top: 1px solid #e5e5e5;
+
+  &--contacts {
+    margin-bottom: 23px;
+  }
+
+  &--impressions {
+    margin-bottom: 37px;
+  }
+
+  &--attraction {
+    margin-bottom: 31px;
+  }
+
+  &--commentary {
+    margin-bottom: 18px;
+  }
+}
+
+///////////////////////////ПОЛЯ АВТОРА
+
+.review-form__author-group {
+  display: flex;
+  align-items: baseline;
+
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &--big-margin {
+    margin-bottom: 26px;
+  }
+}
+
+.review-form__author {
+  flex-grow: 1;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  .font-PTS-bold(18px, 26px);
+
+  border: none;
+
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.review-form__author-label {
+  margin-right: 18px;
+}
+
+///////////////////////////ПОЛЯ КОНТАКТОВ
+
+.review-form__contacts-group {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 14px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &--big-margin {
+    margin-bottom: 27px;
+  }
+}
+
+.review-form__contacts-label {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 20px;
+
+  &::after {
+    position: absolute;
+    top: 31px;
+    right: 20px;
+
+    display: block;
+    width:58px;
+    height: 58px;
+
+    content: "";
+  }
+
+  &--tel {
+    &::after {
+      background: url("../img/icon-phone.svg") no-repeat #e6e6e6 50%;
+    }
+  }
+
+  &--email {
+    &::after {
+      background: url("../img/icon-mail.svg") no-repeat #e6e6e6 50%;
+    }
+  }
+}
+
+.review-form__contacts {
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  .font-PTS-bold(18px, 26px);
+
+  border: none;
+
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.review-form__contacts-error {
+  margin-left: 20px;
+  padding-top: 4px;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: none;
+  color: #ff5c5c;
+}
+
+///////////////////////////ПОЛЯ ВПЕЧAТЛЕНИЙ
+
+.review-form__impressions {
+  display: none;
+}
+
+.review-form__impressions-label {
+  position: relative;
+
+  margin-bottom: 43px;
+  padding-left: 98px;
+
+  .font-PTS-bold(18px, 26px);
+  text-transform: none;
+
+  &::before {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+
+    display: block;
+    width: 22px;
+    height: 22px;
+
+    border: 17px solid #f2f2f2;
+
+    border-radius: 50%;
+
+    background-color: #f2f2f2;
+
+    content: "";
+  }
+}
+
+.review-form__impressions:checked + .review-form__impressions-label::before {
+  background-color: #333333;
+}
+
+///////////////////////////ПОЛЯ ПОСЕЩЕННЫХ ДОСТОПРИМЕЧАТЕЛЬНОСТЕЙ
+
+.review-form__attraction {
+  display: none;
+}
+
+.review-form__attraction-label {
+  position: relative;
+
+  margin-bottom: 54px;
+  padding-left: 98px;
+
+  .font-PTS-bold(18px, 26px);
+  text-transform: none;
+
+  &--small-margin {
+    margin-bottom: 41px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+
+    display: block;
+    width: 56px;
+    height: 56px;
+
+    border-radius: 5px;
+
+    background-color: #f2f2f2;
+
+    content: "";
+  }
+}
+
+.review-form__attraction:checked + .review-form__attraction-label::before {
+  background: url("../img/icon-tick.svg") no-repeat 50%;
+  background-color: #f2f2f2;
+}
+
+///////////////////////////ПОЛE КОММЕНТАРИЯ
+
+.review-form__commentary {
+  box-sizing: border-box;
+  min-width: 280px;
+  height: 160px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 15px 20px;
+
+  .font-PTS-bold(18px, 26px);
+  text-transform: none;
+
+  border: none;
+
+  outline: none;
+  background-color: #f2f2f2;
+
+  resize: none;
+}
+
+.review-form__btn {
+  min-width: 280px;
+  height: 58px;
+  margin: 0 auto;
+
+  border: none;
+}

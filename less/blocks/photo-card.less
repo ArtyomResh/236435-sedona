@@ -1,0 +1,59 @@
+.photo-card {
+  padding-top: 21px;
+  padding-bottom: 17px;
+
+  text-align: center;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.photo-card__pic {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.photo-card__description {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 280px;
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+.photo-card__caption {
+  width: 100%;
+
+  .font-PTS-bold(14px, 24px);
+}
+
+.photo-card__author {
+  width: 100%;
+  margin-bottom: 8px;
+
+  line-height: 24px;
+  text-transform: none;
+}
+
+.photo-card__like {
+  position: relative;
+
+  padding-left: 37px;
+
+  .font-PTS-bold(14px, 24px);
+
+  &::before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+
+    width: 23px;
+    height: 21px;
+
+    background: url("../img/icon-like.svg") no-repeat;
+
+    content: "";
+  }
+}
