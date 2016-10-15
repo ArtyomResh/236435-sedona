@@ -10,7 +10,13 @@
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     <header class="header-main">
       <div class="header-main__logo-wrapper">
-        <a class="header-main__logo  logo-main"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны"></a>
+        <a class="header-main__logo  logo-main">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" alt="Логотип Седоны">
+          </picture>
+        </a>
         <a href="#" class="header-main__burger"></a>
       </div>
       <nav class="header-main__nav">
