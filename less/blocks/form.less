@@ -9,8 +9,13 @@ textarea::placeholder {
 }
 
 .review-form {
+  position: relative;
+  z-index: 1;
+
   margin-top: -11px;
   padding-bottom: 43px;
+
+  background-color: #ffffff;
 }
 
 .review-form__fieldset {
@@ -160,6 +165,14 @@ textarea::placeholder {
 
 ///////////////////////////ПОЛЯ ВПЕЧAТЛЕНИЙ
 
+.review-form__impressions-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
 .review-form__impressions {
   display: none;
 }
@@ -200,6 +213,14 @@ textarea::placeholder {
 
 .review-form__attraction {
   display: none;
+}
+
+.review-form__attraction-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 320px;
+  margin: 0 auto;
 }
 
 .review-form__attraction-label {
@@ -258,10 +279,453 @@ textarea::placeholder {
   resize: none;
 }
 
+///////////////////////////КНОПКА
+
 .review-form__btn {
   min-width: 280px;
   height: 58px;
   margin: 0 auto;
 
   border: none;
+}
+
+///////////////////////////ОПОВЕЩЕНИЕ
+
+.review-form__mandatory--hidden {
+  display: none;
+}
+
+@media @tablet-widths {
+/////////////////////////////ОБЩИЕ НАСТРОЙКИ ДЛЯ ПОЛЕЙ
+
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 0;
+    padding-top: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .review-form__legend {
+    padding: 0;
+
+    font-size: 21px;
+
+    border-top: none;
+  }
+
+/////////////////////////////ПОЛЯ АВТОРА
+
+  .review-form__fieldset--author {
+    order: 2;
+
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0;
+    max-width: 480px;
+    padding-left: 8.4%;
+
+    border-left: 1px solid #e5e5e5;
+  }
+
+  .review-form__legend--author {
+    margin: 0;
+    margin-bottom: 57px;
+
+    text-align: left;
+  }
+
+  .review-form__legend--author span {
+    display: none;
+  }
+
+  .review-form__author-group {
+    display: flex;
+
+    max-width: 400px;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &--small-margin {
+      margin-bottom: 0;
+    }
+  }
+
+/////////////////////////////ПОЛЯ ВПЕЧAТЛЕНИЙ
+
+  .review-form__fieldset--impressions {
+    order: 1;
+    align-self: flex-start;
+
+    box-sizing: border-box;
+    flex-grow: 1;
+    max-width: 480px;
+    margin-left: auto;
+  }
+
+  .review-form__impressions-wrapper {
+    margin: 0;
+  }
+
+  .review-form__legend--impressions {
+    margin: 0;
+    margin-bottom: 72px;
+    padding-right: 50px;
+
+    text-align: center;
+  }
+
+  .review-form__impressions-label {
+    padding-left: 76px;
+    margin-bottom: 53px;
+
+    &--small-margin {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -14px;
+      left: 0;
+    }
+  }
+
+/////////////////////////////ПОЛЯ КОНТАКТОВ
+
+  .review-form__fieldset--contacts {
+    order: 3;
+
+    width: 100%;
+    margin-top: 70px;
+    padding: 0;
+  }
+
+  .review-form__legend--contacts {
+    position: relative;
+
+    margin-bottom: 27px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+
+      display: block;
+      width: 100%;
+      height: 1px;
+
+      background-color: #e5e5e5;
+
+      content: "";
+    }
+  }
+
+  .review-form__legend--contacts span {
+    position: relative;
+    z-index: 2;
+
+    padding: 0 60px;
+
+    background-color: #ffffff;
+  }
+
+  .review-form__contacts-group {
+    flex-grow: 1;
+
+    margin-bottom: 25px;
+    padding-right: 0;
+    padding-left: 0;
+
+    &--small-margin {
+      margin-bottom: 0;
+    }
+  }
+
+  .review-form__contacts-label {
+    width: 196px;
+    order: 1;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .review-form__contacts-error {
+    order: 2;
+
+    margin-left: auto;
+    margin-top: -3px;
+    padding: 0;
+  }
+
+  .review-form__contacts {
+    order: 3;
+  }
+
+/////////////////////////////ПОЛЯ ПОСЕЩЕННЫХ ДОСТОПРИМЕЧАТЕЛЬНОСТЕЙ
+
+  .review-form__fieldset--attraction {
+    order: 4;
+
+    width: 100%;
+    margin-top: 52px;
+    padding: 0;
+  }
+
+
+  .review-form__legend--attraction {
+    position: relative;
+
+    order: 1;
+
+    margin-bottom: 55px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+
+      display: block;
+      width: 100%;
+      height: 1px;
+
+      background-color: #e5e5e5;
+
+      content: "";
+    }
+  }
+
+  .review-form__legend--attraction span {
+    position: relative;
+    z-index: 2;
+
+    box-sizing: border-box;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0 60px;
+
+    background-color: #ffffff;
+  }
+
+  .review-form__attraction-wrapper {
+    padding-left: 65px;
+    width: 583px;
+  }
+
+  .review-form__attraction-label {
+    width: 150px;
+    margin-bottom: 63px;
+    padding-left: 110px;
+
+    &::before  {
+      left: 30px;
+    }
+
+    &[for="devils-bridge"] {
+      order: 1;
+    }
+
+    &[for="slide-park"] {
+      order: 3;
+    }
+
+    &[for="mount-bell"] {
+      order: 2;
+    }
+
+    &[for="red-rocks"] {
+      order: 4;
+    }
+  }
+
+/////////////////////////////ПОЛE КОММЕНТАРИЯ
+
+  .review-form__fieldset--commentary {
+    order: 5;
+
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .review-form__legend--commentary {
+    position: relative;
+
+    order: 1;
+
+    margin-bottom: 59px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+
+      display: block;
+      width: 100%;
+      height: 1px;
+
+      background-color: #e5e5e5;
+
+      content: "";
+    }
+  }
+
+  .review-form__legend--commentary label {
+    position: relative;
+    z-index: 2;
+
+    box-sizing: border-box;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0 60px;
+
+    background-color: #ffffff;
+  }
+
+  .review-form__commentary {
+    width: 100%;
+    margin-bottom: 57px
+
+  }
+
+/////////////////////////////КНОПКА
+  .review-form__btn {
+    order: 6;
+
+    width: 324px;
+    margin: 0;
+  }
+
+/////////////////////////////ОПОВЕЩЕНИЕ
+
+  .review-form__mandatory {
+    order: 7;
+    align-self: center;
+
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media @desktop-widths {
+/////////////////////////////ОБЩИЕ НАСТРОЙКИ ДЛЯ ПОЛЕЙ
+
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 0;
+    padding-top: 11px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 65px;
+  }
+
+/////////////////////////////ПОЛЯ АВТОРА
+
+  .review-form__legend--author span {
+    display: inline;
+  }
+/////////////////////////////ПОЛЯ КОНТАКТОВ
+
+  .review-form__fieldset--contacts {
+    margin-top: 67px;
+    padding-top: 18px;
+  }
+
+  .review-form__legend--contacts {
+    position: relative;
+
+    margin-bottom: 27px;
+  }
+
+  .review-form__contacts-wrapper {
+    display: flex;
+  }
+
+  .review-form__contacts-group {
+    align-items: baseline;
+
+    width: 480px;
+
+    &--big-margin {
+      margin-top: 30px;
+    }
+  }
+
+  .review-form__contacts-label {
+    order: 2;
+
+    width: auto;
+    margin-right: 22px;
+    padding: 0;
+
+    &--tel {
+      &::after {
+        top: 30px;
+        right: 80px;
+      }
+    }
+
+    &--email {
+      &::after {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .review-form__contacts-label span {
+    display: none;
+  }
+
+  .review-form__contacts {
+    order: 3;
+
+    width: 315px;
+  }
+
+  .review-form__contacts-error {
+    order: 1;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-left: 105px;
+  }
+
+///////////////////////////ПОЛЯ ПОСЕЩЕННЫХ ДОСТОПРИМЕЧАТЕЛЬНОСТЕЙ
+
+  .review-form__fieldset--attraction {
+    margin-top: 27px;
+  }
+
+  .review-form__attraction-wrapper {
+    justify-content: space-between;
+
+    padding-left: 0px;
+    width: 100%;
+  }
+
+  .review-form__attraction-label {
+    width: auto;
+    padding-left: 80px;
+
+    &::before  {
+      left: 0px;
+    }
+  }
+
+/////////////////////////////КНОПКА
+
+  .review-form__btn {
+    width: 480px;
+  }
 }
