@@ -31,21 +31,24 @@
 
 .photo-card__author {
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 
   line-height: 24px;
   text-transform: none;
 }
 
 .photo-card__like {
-  position: relative;
+  display: flex;
+  align-items: baseline;
+
+  width: 70px;
 
   .font-PTS-bold(14px, 24px);
+  text-align: left;
 }
 
 .photo-card__like-icon {
-  margin-top: -10px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 @media @tablet-widths {
@@ -98,8 +101,7 @@
   }
 
   .photo-card__like-icon {
-    margin-top: 0;
-    margin-right: 5px;
+    margin-right: 8px;
   }
 }
 

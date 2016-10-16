@@ -63,10 +63,10 @@
             <span class="photo-card__caption">Неродные просторы</span>
             <span class="photo-card__author">Автор фото: Борис</span>
             <span class="photo-card__like">
-              <svg class="icon  icon--like" width="23" height="21">
+              <svg class="photo-card__like-icon  icon  icon--like" width="23" height="21">
                 <use xlink:href="#icon-like"></use>
               </svg>
-              1350
+              <span>1350</span>
             </span>
           </div>
         </section>
@@ -83,10 +83,10 @@
             <span class="photo-card__caption">Местная растительность</span>
             <span class="photo-card__author">Автор фото: Сергей</span>
             <span class="photo-card__like">
-              <svg class="icon  icon--like" width="23" height="21">
+              <svg class="photo-card__like-icon  icon  icon--like" width="23" height="21">
                 <use xlink:href="#icon-like"></use>
               </svg>
-              143
+              <span>143</span>
             </span>
           </div>
         </section>
@@ -103,10 +103,10 @@
             <span class="photo-card__caption">Дорога на север</span>
             <span class="photo-card__author">Автор фото: Петр</span>
             <span class="photo-card__like">
-              <svg class="icon  icon--like" width="23" height="21">
+              <svg class="photo-card__like-icon  icon  icon--like" width="23" height="21">
                 <use xlink:href="#icon-like"></use>
               </svg>
-              96
+              <span>96</span>
             </span>
           </div>
         </section>
@@ -123,10 +123,10 @@
             <span class="photo-card__caption">Мост дьявола</span>
             <span class="photo-card__author">Автор фото: Антон</span>
             <span class="photo-card__like">
-              <svg class="icon  icon--like" width="23" height="21">
+              <svg class="photo-card__like-icon  icon  icon--like" width="23" height="21">
                 <use xlink:href="#icon-like"></use>
               </svg>
-              254
+              <span>254</span>
             </span>
           </div>
         </section>
@@ -137,7 +137,13 @@
         <p class="video__text">
           Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
-        <video class="video__player" width="320" height="201" preload="metadata" poster="img/video-mobile@1x.jpg"></video>
+        <video class="video__player" width="320" height="201" preload="none">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью">
+          </picture>
+        </video>
         <div class="video__controls">
 
           <div class="video__scale">
