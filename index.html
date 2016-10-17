@@ -10,7 +10,13 @@
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     <header class="header-main">
       <div class="header-main__logo-wrapper">
-        <a class="header-main__logo  logo-main"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны"></a>
+        <a class="header-main__logo  logo-main">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" alt="Логотип Седоны">
+          </picture>
+        </a>
         <a href="#" class="header-main__burger"></a>
       </div>
       <nav class="header-main__nav">
@@ -35,7 +41,7 @@
 
       <header class="header-content">
         <div class="header-content__welcome-wrapper  header-content__welcome-wrapper--big-photo">
-          <img class="header-content__welcome" src="img/text-sedona-index.svg" width="282" height="214" alt="Слоган Седоны">
+          <img class="header-content__welcome  header-content__welcome--index" src="img/text-sedona-index.svg" width="282" height="214" alt="Слоган Седоны">
         </div>
         <h2 class="header-content__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="header-content__text  header-content__text--high">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
@@ -48,42 +54,50 @@
             <h2 class="advantages-item__tittle  advantages-item__tittle--white">Настоящий городок</h2>
             <p class="advantages-item__text  advantages-item__text--wide"><span class="advantages-item__number">— №1 —</span>Седона не атракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="advantages-item__photo" src="img/photo-city-mobile@1x.jpg" width="320" height="260" alt="Фотография городок Седона">
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/photo-city@1x.jpg 1x, img/photo-city@2x.jpg 2x">
+            <source media="(min-width:768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+            <img class="advantages-item__photo" src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@2x.jpg 2x" alt="Фотография городок Седона">
+          </picture>
           <ul class="advantages-item__features-list">
-            <li class="advantages-item__features-list-item">
+            <li class="advantages-item__features-list-item  advantages-item__features-list-item--house">
               <h3 class="advantages-item__feature-title  advantages-item__feature-title--house">Жильё</h3>
               <p class="advantages-item__feature-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="advantages-item__features-list-item">
+            <li class="advantages-item__features-list-item  advantages-item__features-list-item--gift">
               <h3 class="advantages-item__feature-title  advantages-item__feature-title--gift">Сувениры</h3>
-              <p class="advantages-item__feature-text">Не только китайского, но и местного производства!</p>
+              <p class="advantages-item__feature-text  advantages-item__feature-text--gift">Не только китайского, но&nbsp;и&nbsp;местного производства!</p>
             </li>
-            <li class="advantages-item__features-list-item">
+            <li class="advantages-item__features-list-item  advantages-item__features-list-item--burger">
               <h3 class="advantages-item__feature-title  advantages-item__feature-title--burger">Еда</h3>
-              <p class="advantages-item__feature-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <p class="advantages-item__feature-text  advantages-item__feature-text--burger">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
           </ul>
         </article>
 
         <article class="advantages-item">
-          <div class="advantages-item__header  advantages-item__header--blue">
+          <div class="advantages-item__header  advantages-item__header--blue  advantages-item__header--bridge">
             <h2 class="advantages-item__tittle  advantages-item__tittle--white">Там есть Мост Дьявола</h2>
-            <p class="advantages-item__text"><span class="advantages-item__number">— №2 —</span> Да, по нему можно пройти! если конечно вы осмелитесь</p>
+            <p class="advantages-item__text  advantages-item__text--tight"><span class="advantages-item__number">— №2 —</span> Да, по нему можно пройти! если конечно вы осмелитесь</p>
           </div>
-          <img class="advantages-item__photo" src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Фотография Мост Дьявола">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge@1x.jpg 1x, img/photo-bridge@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="advantages-item__photo  advantages-item__photo--bridge" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография Мост Дьявола">
+          </picture>
         </article>
 
         <article class="advantages-item">
           <div class="advantages-item__header   advantages-item__header--gray  advantages-item__header--underline">
             <h2 class="advantages-item__tittle">Небольшая площадь</h2>
-            <p class="advantages-item__text"><span class="advantages-item__number">— №3 —</span> Все достопримечательности находятся очень близко</p>
+            <p class="advantages-item__text"><span class="advantages-item__number">— №3 —</span> Все достопримеча&shy;тельности находятся очень близко</p>
           </div>
         </article>
 
         <article class="advantages-item">
           <div class="advantages-item__header  advantages-item__header--gray  advantages-item__header--underline">
             <h2 class="advantages-item__tittle">Красивая дорога</h2>
-            <p class="advantages-item__text"><span class="advantages-item__number">— №4 —</span> Ехать в седону из лас-вегаса совсем не скучно!</p>
+            <p class="advantages-item__text"><span class="advantages-item__number">— №4 —</span> Ехать в седону из лас-&nbsp;вегаса совсем не&nbsp;скучно!</p>
           </div>
         </article>
 
@@ -99,10 +113,14 @@
       <section class="hotel-search">
 
         <h2 class="hotel-search__title">Заинтересовались?</h2>
-        <p class="hotel-search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p class="hotel-search__text">Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a href="#" class="btn  hotel-search__btn">Найти гостиницу</a>
         <div class="hotel-search__map">
-          <img src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg">
+            <img src="img/bg-map-mobile@1x.jpg"  alt="Карта">
+          </picture>
         </div>
       </section>
 
