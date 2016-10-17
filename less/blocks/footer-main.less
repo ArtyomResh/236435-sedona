@@ -26,6 +26,14 @@
   &:last-of-type {
     margin-right: 0;
   }
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
 .footer-main__copy-right {
@@ -40,6 +48,18 @@
   line-height: 26px;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-main__copy-right:hover > .footer-main__htmlacademy-logo {
+  fill: #81b3d2;
+}
+
+.footer-main__copy-right:active > .footer-main__htmlacademy-logo {
+  fill: #b2b2b2;
+}
+
+.footer-main__htmlacademy-logo {
+  margin-right: -5px;
 }
 
 @media @tablet-widths {
@@ -74,15 +94,10 @@
 
   .footer-main__copy-right {
     justify-content: space-between;
-    align-items: flex-start;
 
     width: 130px;
     margin: 0;
-  }
-
-  .footer-main__copy-right img {
-    margin-top: -10px;
-    margin-right: -6px;
+    margin-top: -15px;
   }
 }
 

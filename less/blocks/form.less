@@ -84,6 +84,17 @@ textarea::placeholder {
 
   background-color: #f2f2f2;
   outline: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 5px solid #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 .review-form__author-label {
@@ -150,6 +161,17 @@ textarea::placeholder {
 
   background-color: #f2f2f2;
   outline: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 5px solid #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 .review-form__contacts-error {
@@ -203,6 +225,16 @@ textarea::placeholder {
 
     content: "";
   }
+
+  &:hover::before {
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    border-color: #d5d5d5;
+    background-color: #d5d5d5;
+  }
 }
 
 .review-form__impressions:checked + .review-form__impressions-label::before {
@@ -251,11 +283,30 @@ textarea::placeholder {
 
     content: "";
   }
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d5d5d5;
+  }
 }
 
-.review-form__attraction:checked + .review-form__attraction-label::before {
-  background: url("../img/icon-tick.svg") no-repeat 50%;
-  background-color: #f2f2f2;
+.review-form__attraction:checked + .review-form__attraction-label {
+
+  &::before {
+    background: url("../img/icon-tick.svg") no-repeat 50%;
+    background-color: #f2f2f2;
+  }
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d5d5d5;
+  }
 }
 
 ///////////////////////////ПОЛE КОММЕНТАРИЯ
@@ -277,6 +328,17 @@ textarea::placeholder {
   background-color: #f2f2f2;
 
   resize: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 5px solid #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 ///////////////////////////КНОПКА
@@ -304,8 +366,9 @@ textarea::placeholder {
 
     margin-top: 0;
     padding-top: 25px;
-    padding-left: 60px;
     padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
   }
 
   .review-form__legend {
@@ -669,7 +732,7 @@ textarea::placeholder {
 
     &--tel {
       &::after {
-        top: 30px;
+        top: 31px;
         right: 80px;
       }
     }
