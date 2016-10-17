@@ -95,6 +95,10 @@ textarea::placeholder {
     border: 5px solid #e5e5e5;
     background-color: #ffffff;
   }
+
+  &:invalid {
+    border: 5px solid #ff5c5c;;
+  }
 }
 
 .review-form__author-label {
@@ -172,6 +176,10 @@ textarea::placeholder {
     border: 5px solid #e5e5e5;
     background-color: #ffffff;
   }
+
+  &:invalid {
+    border: 5px solid #ff5c5c;
+  }
 }
 
 .review-form__contacts-error {
@@ -183,6 +191,10 @@ textarea::placeholder {
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: none;
   color: #ff5c5c;
+
+  &--hidden {
+    color: transparent;
+  }
 }
 
 ///////////////////////////ПОЛЯ ВПЕЧAТЛЕНИЙ
@@ -338,6 +350,10 @@ textarea::placeholder {
     padding-left: 15px;
     border: 5px solid #e5e5e5;
     background-color: #ffffff;
+  }
+
+  &:invalid {
+    border: 5px solid #ff5c5c;
   }
 }
 
@@ -733,7 +749,7 @@ textarea::placeholder {
     &--tel {
       &::after {
         top: 31px;
-        right: 80px;
+        right: 79px;
       }
     }
 
