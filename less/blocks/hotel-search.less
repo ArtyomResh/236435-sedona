@@ -30,8 +30,14 @@
 
 .hotel-search__map {
   position: relative;
+  width: 100%;
   height: 350px;
-  &::after {
+
+  &--js::after {
+    display: none;
+  }
+
+  &--nojs::after {
     position: absolute;
     top: 50%;
     left: 50%;
