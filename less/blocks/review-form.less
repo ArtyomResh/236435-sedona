@@ -60,6 +60,8 @@ textarea::placeholder {
   display: flex;
   align-items: baseline;
 
+  box-sizing: border-box;
+  width: 100%;
   margin-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
@@ -73,7 +75,7 @@ textarea::placeholder {
   flex-grow: 1;
 
   box-sizing: border-box;
-  width: 100%;
+  width: 50%;
   height: 58px;
   padding-right: 20px;
   padding-left: 20px;
@@ -94,10 +96,12 @@ textarea::placeholder {
     padding-left: 15px;
     border: 5px solid #e5e5e5;
     background-color: #ffffff;
+    outline-color: transparent;
   }
 
   &:invalid {
-    border: 5px solid #ff5c5c;;
+    border: 5px solid #ff5c5c;
+    outline-color: transparent;
   }
 }
 
@@ -120,6 +124,10 @@ textarea::placeholder {
   &--big-margin {
     margin-bottom: 27px;
   }
+}
+
+.review-form__contacts-wrapper {
+  width: 100%;
 }
 
 .review-form__contacts-label {
@@ -440,6 +448,7 @@ textarea::placeholder {
 
     box-sizing: border-box;
     flex-grow: 1;
+    width: 50%;
     max-width: 480px;
     margin-left: auto;
   }
@@ -451,7 +460,7 @@ textarea::placeholder {
   .review-form__legend--impressions {
     margin: 0;
     margin-bottom: 72px;
-    padding-right: 50px;
+    padding-right: 44px;
 
     text-align: center;
   }
@@ -558,8 +567,6 @@ textarea::placeholder {
   .review-form__legend--attraction {
     position: relative;
 
-    order: 1;
-
     margin-bottom: 55px;
 
     &::before {
@@ -634,8 +641,6 @@ textarea::placeholder {
 
   .review-form__legend--commentary {
     position: relative;
-
-    order: 1;
 
     margin-bottom: 59px;
 
@@ -743,7 +748,7 @@ textarea::placeholder {
     order: 2;
 
     width: auto;
-    margin-right: 22px;
+    margin-right: 21px;
     padding: 0;
 
     &--tel {
